@@ -28,7 +28,6 @@
 #ifndef FMT_FORMAT_H_
 #define FMT_FORMAT_H_
 
-#define FMT_INCLUDE
 #include <cassert>
 #include <clocale>
 #include <cmath>
@@ -40,10 +39,9 @@
 #include <string>
 #include <vector>
 #include <utility>  // for std::pair
-#undef FMT_INCLUDE
 
 // The fmt library version in the form major * 10000 + minor * 100 + patch.
-#define FMT_VERSION 40100
+#define FMT_VERSION 40200
 
 #if defined(__has_include)
 # define FMT_HAS_INCLUDE(x) __has_include(x)
@@ -84,7 +82,7 @@ typedef __int64          intmax_t;
 #endif
 
 #if !defined(FMT_HEADER_ONLY) && defined(_WIN32)
-# ifdef FMT_EXPORT
+# ifdef FMT_EXPORTS
 #  define FMT_API __declspec(dllexport)
 # elif defined(FMT_SHARED)
 #  define FMT_API __declspec(dllimport)
@@ -4163,11 +4161,11 @@ operator"" _a(const wchar_t *s, std::size_t) { return {s}; }
 # pragma clang diagnostic pop
 #endif
 
-#ifdef FMT_HEADER_ONLY
+#if defined(FMT_HEADER_ONLY)
 # define FMT_FUNC inline
-# include "format.cc"
+# include "fmt_format.cc"
 #else
-# define FMT_FUNC
+#define FMT_FUNC
 #endif
 
 #endif  // FMT_FORMAT_H_

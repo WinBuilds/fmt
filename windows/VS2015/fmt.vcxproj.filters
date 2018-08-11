@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\fmt_format.cc" />
+    <ClCompile Include="..\..\src\fmt_ostream.cc" />
+    <ClCompile Include="..\..\src\fmt_printf.cc" />
+    <ClCompile Include="..\..\src\fmt_posix.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\fmt_time.h" />
+    <ClInclude Include="..\..\include\fmt_string.h" />
+    <ClInclude Include="..\..\include\fmt_ostream.h" />
+    <ClInclude Include="..\..\include\fmt_format.h" />
+    <ClInclude Include="..\..\include\fmt_container.h" />
+    <ClInclude Include="..\..\include\fmt_printf.h" />
+    <ClInclude Include="..\..\include\fmt_posix.h" />
+  </ItemGroup>
+</Project>
