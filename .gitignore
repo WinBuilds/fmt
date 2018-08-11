@@ -16,4 +16,15 @@ CTestTestfile.cmake
 CMakeCache.txt
 CMakeFiles
 Makefile
+
+build/
+build-*/
+build_*/
+.vs
+ipch/
+*.aps
+*.VC.db
+*.VC.opendb
+
+*.lnk
 run-msbuild.bat
